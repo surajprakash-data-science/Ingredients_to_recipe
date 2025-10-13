@@ -1,0 +1,6 @@
+pandas
+re
+spacy
+numpy
+sklearn
+gensim
