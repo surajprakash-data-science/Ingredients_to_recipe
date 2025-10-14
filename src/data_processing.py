@@ -11,7 +11,7 @@ def load_data(file_path):
 def clean_text_for_word2vec(text):
     doc = nlp(text)
     tokens = [token.lower_ for token in doc if not token.is_space]
-    return tokens
+    return tokens.lemma_
 
 def clean_text_for_inference(text):
     doc = nlp(text)
@@ -26,7 +26,7 @@ def clean_text_for_inference(text):
 def preprocess_dataframe(df):
     # Drop exact duplicate rows
     df = df.drop_duplicates()
-    
+
     df['ingredients'] = df['ingredients'].apply(lambda x: re.sub(r'[\n\t]+', ' ', re.sub(r'\s+', ' ', x)).strip())
     df['prep_time'] = df['prep_time'].fillna('Within in 40 M')
     df['course'] = df['course'].fillna('Lunch')

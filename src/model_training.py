@@ -27,12 +27,14 @@ def get_avg_vector(tokens, model):
 if __name__ == "__main__":
     from data_processing import load_data, preprocess_dataframe
 
+    # Loading and pre-processing the data
     print("Loading and preprocessing data...")
     df = load_data('data/cuisine_updated.csv')
     df = preprocess_dataframe(df)
 
+    # Training model
     print("Training Word2Vec model...")
-    sentences = df['name_combined_tokens'].tolist()
+    sentences = df['name_combined_tokens']
     model = train_word2vec_model(sentences)
 
     # Save the trained model to a file
