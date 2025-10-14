@@ -8,7 +8,7 @@ This project follows MLOps principles, with a focus on reproducibility, modulari
 ******************
 The project is organized into a modular structure to separate different parts of the machine learning pipeline:
 
-data/: Contains the raw dataset, cuisine_updated.csv.
+This file contains the raw dataset: cuisine_updated.csv.
 
 notebooks/: Holds exploratory data analysis (EDA) notebooks, such as recipe_eda.ipynb, for experimentation and visualization.
 
