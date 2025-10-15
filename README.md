@@ -1,10 +1,10 @@
-## Ingredients To Recipe Recommendation System.
+# Ingredients To Recipe Recommendation System.
 ********************************************
 This project is a recipe recommendation system that is designed to solve a very common real world problem. It uses a combination of data preprocessing, natural language processing (NLP), and vector similarity to suggest recipes based on a user's entered ingredients. The core of the system is a Word2Vec model trained on a dataset of diverse recipes, which is used to find semantic similarities between ingredients.
 
 This project follows MLOps principles, with a focus on reproducibility, modularity, and automation.
 
-# Project Structure.
+## Project Structure.
 ******************
 The project is organized into a modular structure to separate different parts of the machine learning pipeline:
 
@@ -24,7 +24,7 @@ models/: Stores the trained model artifacts, versioned using DVC.
 
 Dockerfile: Defines the environment and dependencies for building a containerized version of the application.
 
-# Key Technologies.
+## Key Technologies.
 *****************
 Python: The main programming language used.
 
@@ -38,7 +38,7 @@ DVC (Data Version Control): For versioning the large data and model files.
 
 Docker: For packaging the application and its environment for consistent deployment.
 
-# Getting Started.
+## Getting Started.
 ****************
 Step 1: Clone the Repository:
 
@@ -56,7 +56,7 @@ This project uses DVC to manage large files. After installing DVC, pull the data
 
 "dvc pull"
 
-# How to Use.
+## How to Use.
 ***********
 You can run the inference script from your terminal to get recipe recommendations.
 
@@ -64,7 +64,7 @@ You can run the inference script from your terminal to get recipe recommendation
 
 This will prompt you to enter a list of ingredients, and the system will output the top 5 most similar recipes from the dataset.
 
-# Contact.
+## Contact.
 ********
 If you have any questions or feedback, please feel free to open an issue or contact me at 
 Email: surajprakash612@gmail.com
