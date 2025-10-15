@@ -11,7 +11,7 @@ def load_data(file_path):
 def clean_text_for_word2vec(text):
     doc = nlp(text)
     tokens = [token.lower_ for token in doc if not token.is_space]
-    return tokens.lemma_
+    return tokens
 
 def clean_text_for_inference(text):
     doc = nlp(text)

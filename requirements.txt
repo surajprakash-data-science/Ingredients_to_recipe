@@ -1,6 +1,5 @@
-pandas
-re
-spacy
-numpy
-sklearn
-gensim
+pandas==2.0.3 
+numpy==1.24.4 
+spacy==3.7.5 
+scikit-learn==1.3.2 
+gensim==4.3.2

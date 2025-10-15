@@ -13,7 +13,7 @@ def train_word2vec_model(sentences, vector_size=100, window=5, min_count=1):
         min_count = min_count,
         workers = 4
     )
-    model.train(sentences, total_example = len(sentences), epochs=10)
+    model.train(sentences, total_examples = model.corpus_count, epochs=10)
     return model
 
 def get_avg_vector(tokens, model):
@@ -29,9 +29,10 @@ if __name__ == "__main__":
 
     # Loading and pre-processing the data
     print("Loading and preprocessing data...")
-    df = load_data('data/cuisine_updated.csv')
+    df = load_data('A:\ML practice\ingredients to recipie\data\cuisine_updated.csv')
     df = preprocess_dataframe(df)
-
+    df.to_csv('A:\ML practice\ingredients to recipie\data\processed_recipes.csv', index=False)
+    
     # Training model
     print("Training Word2Vec model...")
     sentences = df['name_combined_tokens']

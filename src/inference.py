@@ -1,6 +1,8 @@
+import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from src.data_processing import clean_text_for_inference, clean_text_for_word2vec
+from data_processing import clean_text_for_inference, clean_text_for_word2vec
+from gensim.models import Word2Vec
 
 def find_similar_recipies(user_ingredients, df, model):
     """Finds the most similar recipes based on user input."""
@@ -31,11 +33,15 @@ if __name__ == "__main__":
     #  loading trained model
     trained_model = Word2Vec.load('models/word2vec.model')
 
+    # Load your DataFrame here (replace with your actual loading code)
+    
+    df = pd.read_csv('A:\ML practice\ingredients to recipie\data\processed_recipes.csv')  # Update the path and filename as needed
+
     # calculating average vector of ingredients and name combined coloum
     df['avg_vec'] = df['v_cleaned'].apply(lambda x: get_avg_vector(x, trained_model))
 
     user_input = input('Enter the ingredients:')
-    similar_recipes = find_similar_recipes(user_input, df, trained_model)
+    similar_recipes = find_similar_recipies(user_input, df, trained_model)
 
     print('\n Top 5 similar recipies are: \n')
     for recipe, score in similar_recipes:
