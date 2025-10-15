@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Loading and pre-processing the data
     print("Loading and preprocessing data...")
-    df = load_data('A:\ML practice\ingredients to recipie\data\cuisine_updated.csv')
+    df = load_data('https://github.com/surajprakash-data-science/Ingredients_to_recipe/blob/main/data/cuisine_updated.csv')
     df = preprocess_dataframe(df)
     df.to_csv('A:\ML practice\ingredients to recipie\data\processed_recipes.csv', index=False)
     

@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     # Load your DataFrame here (replace with your actual loading code)
     
-    df = pd.read_csv('A:\ML practice\ingredients to recipie\data\processed_recipes.csv')  # Update the path and filename as needed
+    df = pd.read_csv('https://github.com/surajprakash-data-science/Ingredients_to_recipe/blob/main/data/processed_recipes.csv')  # Update the path and filename as needed
 
     # calculating average vector of ingredients and name combined coloum
     df['avg_vec'] = df['v_cleaned'].apply(lambda x: get_avg_vector(x, trained_model))
